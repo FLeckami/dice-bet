@@ -9,6 +9,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 
@@ -19,6 +20,34 @@
     <title>Quitte ou double</title>
 </head>
 <body>
-    
+    <button id="newGame">New Game</button>
+
+    <img class="dice" id="dice" src="images/d1.png" alt="dice">
+
+    <div class="players container-fluid row">
+        <div class="p1 col-6">
+            <h1>Player 1</h1>
+            <h2 class="global-score">0</h2>
+
+            <div class="score-box">
+                <h3>Current</h3>
+                <h4 class="current-score">0</h4>
+            </div>
+        </div>
+        <div class="p2 col-6">
+            <h1>Player 2</h1>
+            <h2 class="global-score">0</h2>
+
+            <div class="score-box">
+                <h3>Current</h3>
+                <h4 class="current-score">0</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="action-btn">
+        <button id="rollDice">Roll dice</button>
+        <button id="hold">Hold</button>
+    </div>
 </body>
 </html>

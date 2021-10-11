@@ -1,3 +1,26 @@
+:root{
+    --text-color: #cc4545;
+}
+
 body {
     font-family: 'Lato', sans-serif;
+}
+
+img {
+    max-width: 128px;
+    height: auto;
+}
+
+.score-box {
+    background-color: var(--text-color);
+    color: white;
+}
+
+button::before {
+    font-family: 'Material Icons';
+    color: var(--text-color);
+}
+
+#newGame::before {
+    content: "control_point";
 }
