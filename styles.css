@@ -1,26 +1,79 @@
 :root{
-    --text-color: #cc4545;
+    --text-color: #d33434;
 }
 
 body {
     font-family: 'Lato', sans-serif;
+    position: absolute;
+    margin: 0;
+    padding: 0 !important;
+    height: 100vh;
 }
 
 img {
     max-width: 128px;
     height: auto;
+    transform: translateX(calc(50vw - 64px));
+}
+
+.players {
+    padding: 0;
+    margin: 0;
+    
+}
+
+h1 {
+    color: #bbbbbb;
+}
+
+.p1, .p2 {
+    padding: 10px;
+    margin: 0;
+}
+
+.player-turn {
+    background-color: #ededed;
+}
+
+.player-turn h1 {
+    color: black;
+}
+
+.player-turn h1::after {
+    content: "circle";
+    font-size: small;
+}
+
+.global-score {
+    color: var(--text-color)
 }
 
 .score-box {
+    font-size: 5%;
     background-color: var(--text-color);
     color: white;
+    padding: 5px;
 }
 
-button::before {
+button {
+    border: none;
+    background-color: transparent;
+}
+
+*::before, *::after {
     font-family: 'Material Icons';
     color: var(--text-color);
+    padding: 0;
 }
 
 #newGame::before {
     content: "control_point";
+}
+
+#rollDice::before {
+    content: "cached";
+}
+
+#hold::before {
+    content: "system_update_alt";
 }

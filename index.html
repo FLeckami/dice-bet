@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--feuille de style Bootstrap-->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     
+    <!--feuille de style et police de caractère Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
@@ -19,35 +22,36 @@
 
     <title>Quitte ou double</title>
 </head>
-<body>
-    <button id="newGame">New Game</button>
+<body class="container-fluid">
+    <button class="container-fluid row justify-content-center" id="newGame">NEW GAME</button>
 
-    <img class="dice" id="dice" src="images/d1.png" alt="dice">
+    <img class="dice container-fluid row justify-content-center" id="dice" src="images/d1.png" alt="dice">
 
-    <div class="players container-fluid row">
-        <div class="p1 col-6">
-            <h1>Player 1</h1>
-            <h2 class="global-score">0</h2>
+    <div class="players container-fluid row flex-column flex-lg-row align-items-center justify-content-center">
+        <div class="p1 col-12 col-lg-6 row flex-column align-items-center player-turn">
+            <h1 class="text-center">PLAYER 1</h1>
+            <h2 class="global-score text-center">0</h2>
 
-            <div class="score-box">
-                <h3>Current</h3>
+            <div class="score-box text-center col-4">
+                <h5>CURRENT</h5>
                 <h4 class="current-score">0</h4>
             </div>
         </div>
-        <div class="p2 col-6">
-            <h1>Player 2</h1>
-            <h2 class="global-score">0</h2>
 
-            <div class="score-box">
-                <h3>Current</h3>
+        <div class="p2 col-12 col-lg-6 row flex-column align-items-center">
+            <h1 class="text-center">PLAYER 2</h1>
+            <h2 class="global-score text-center">0</h2>
+
+            <div class="score-box text-center col-4">
+                <h5>CURRENT</h5>
                 <h4 class="current-score">0</h4>
             </div>
         </div>
     </div>
 
-    <div class="action-btn">
-        <button id="rollDice">Roll dice</button>
-        <button id="hold">Hold</button>
+    <div class="action-btn container-fluid row justify-content-center flex-column">
+        <button class="col-12" id="rollDice">ROLL DICE</button>
+        <button class="col-12" id="hold">HOLD</button>
     </div>
 </body>
 </html>
