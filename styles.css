@@ -1,6 +1,4 @@
-:root{
-    --text-color: #d33434;
-}
+
 
 body {
     font-family: 'Lato', sans-serif;
@@ -8,19 +6,52 @@ body {
     margin: 0;
     padding: 0 !important;
     height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, red, yellow);
 }
 
-img {
+@media (min-width: 992px) { /* for PC */
+    .interface {
+        position: absolute;
+        min-height: 100vh;
+        width: 35%;
+        z-index: 10;
+        transform: translateX(33.7vw);
+    }
+
+    .players > div {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 992px) {  /* for mobile */
+    .interface {
+        position: absolute;
+        z-index: 10;
+        transform: translateY(45vh);
+        padding: 0;
+        margin: 0;
+    }
+
+    h1, h5 {
+        font-size: small;
+    }
+
+}
+
+
+.interface img {
     max-width: 128px;
     height: auto;
-    transform: translateX(calc(50vw - 64px));
 }
 
 .players {
     padding: 0;
     margin: 0;
-    
+    position: absolute;
+    min-height: 100vh;
 }
+
 
 h1 {
     color: #bbbbbb;
@@ -29,6 +60,7 @@ h1 {
 .p1, .p2 {
     padding: 10px;
     margin: 0;
+    height: fit-content;
 }
 
 .player-turn {
@@ -41,16 +73,16 @@ h1 {
 
 .player-turn h1::after {
     content: "circle";
-    font-size: small;
+    font-size: 0.5em;
 }
 
 .global-score {
-    color: var(--text-color)
+    color: var(--red)
 }
 
 .score-box {
     font-size: 5%;
-    background-color: var(--text-color);
+    background-color: var(--red);
     color: white;
     padding: 5px;
 }
@@ -58,12 +90,14 @@ h1 {
 button {
     border: none;
     background-color: transparent;
+    position: absolute;
+    font-size: 2vw;
 }
 
 *::before, *::after {
     font-family: 'Material Icons';
-    color: var(--text-color);
-    padding: 0;
+    color: var(--red);
+    padding: 0 10px;
 }
 
 #newGame::before {
