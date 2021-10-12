@@ -40,9 +40,11 @@ body {
 }
 
 
-.interface img {
+#dice {
     max-width: 128px;
     height: auto;
+    padding: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .players {
@@ -55,7 +57,9 @@ body {
 
 h1 {
     color: #bbbbbb;
+    font-size: x-large;
 }
+
 
 .p1, .p2 {
     padding: 10px;
@@ -77,11 +81,12 @@ h1 {
 }
 
 .global-score {
-    color: var(--red)
+    color: var(--red);
+    font-size: 3em;
 }
 
 .score-box {
-    font-size: 5%;
+    font-size: small;
     background-color: var(--red);
     color: white;
     padding: 5px;
