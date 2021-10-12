@@ -30,7 +30,6 @@ btnNewGame.addEventListener('click', newGame)
 btnRollDice.addEventListener('click', (e) => {
     let resultDice = Math.round(Math.random() * 5 + 1)
 
-
     imgDice.setAttribute("src", "images/d"+resultDice+".png")
 
     if (resultDice != 1) {
@@ -55,7 +54,9 @@ btnHold.addEventListener('click', (e) => {
     if (globalScore[currentTurn] >= 100) {
         alert("Player " + (currentTurn+1) + " win !")
         newGame()
+        return
     }
+
 
     currentTurn = (currentTurn + 1) % 2
     changeTurn(currentTurn)
